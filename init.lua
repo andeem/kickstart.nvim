@@ -774,6 +774,7 @@ require('lazy').setup({
           { name = 'nvim_lsp' },
           { name = 'luasnip' },
           { name = 'path' },
+          { name = 'orgmode' },
         },
       }
     end,
@@ -867,6 +868,33 @@ require('lazy').setup({
       --    - Incremental selection: Included, see `:help nvim-treesitter-incremental-selection-mod`
       --    - Show your current context: https://github.com/nvim-treesitter/nvim-treesitter-context
       --    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
+    end,
+  },
+  {
+    'nvim-orgmode/orgmode',
+    event = 'VeryLazy',
+    ft = { 'org' },
+    config = function()
+      -- Setup orgmode
+      ---@diagnostic disable-next-line: missing-fields
+      require('orgmode').setup {
+        org_agenda_files = '~/orgfiles/**/*',
+        org_default_notes_file = '~/orgfiles/refile.org',
+        org_capture_templates = {
+          t = {
+            description = 'Todo',
+            template = '* TODO %?\n',
+            target = '~/orgfiles/inbox.org',
+          },
+        },
+      }
+
+      -- NOTE: If you are using nvim-treesitter with ~ensure_installed = "all"~ option
+      -- add ~org~ to ignore_install
+      -- require('nvim-treesitter.configs').setup({
+      --   ensure_installed = 'all',
+      --   ignore_install = { 'org' },
+      -- })
     end,
   },
   {
