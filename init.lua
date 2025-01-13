@@ -640,12 +640,6 @@ require('lazy').setup({
         -- ts_ls = {},
         --
 
-        ruff_lsp = {
-          settings = {
-            -- Any extra CLI arguments for `ruff` go here.
-            args = {},
-          },
-        },
         lua_ls = {
           -- cmd = { ... },
           -- filetypes = { ... },
@@ -679,6 +673,17 @@ require('lazy').setup({
       vim.list_extend(ensure_installed, {
         'stylua', -- Used to format Lua code
       })
+      -- Configure `ruff-lsp`.
+      -- See: https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#ruff_lsp
+      -- For the default config, along with instructions on how to customize the settings
+      require('lspconfig').ruff.setup {
+        init_options = {
+          settings = {
+            -- Any extra CLI arguments for `ruff` go here.
+            args = {},
+          },
+        },
+      }
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
       require('mason-lspconfig').setup {
@@ -956,6 +961,7 @@ require('lazy').setup({
             target = '~/orgfiles/inbox.org',
           },
         },
+        org_todo_keywords = { 'TODO(t)', 'NEXT(n)', 'WAITING(w)', '|', 'DONE(d)', 'CANCELLED(c)' },
       }
 
       -- NOTE: If you are using nvim-treesitter with ~ensure_installed = "all"~ option
@@ -977,7 +983,7 @@ require('lazy').setup({
     },
     config = function()
       require('org-roam').setup {
-        directory = '~/org_roam_files',
+        directory = '~/orgroamfiles',
         -- optional
         org_files = {
           '~/orgfiles',
