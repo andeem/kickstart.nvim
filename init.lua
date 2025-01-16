@@ -156,6 +156,10 @@ vim.opt.cursorline = true
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
 
+-- Set conceallevel to conceal links in orgmode
+vim.opt.conceallevel = 2
+-- Conceal in normal and command mode
+vim.opt.concealcursor = 'nc'
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
