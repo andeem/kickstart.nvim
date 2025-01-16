@@ -961,7 +961,7 @@ require('lazy').setup({
             target = '~/orgfiles/inbox.org',
           },
         },
-        org_todo_keywords = { 'TODO(t)', 'NEXT(n)', 'WAITING(w)', '|', 'DONE(d)', 'CANCELLED(c)' },
+        org_todo_keywords = { 'TODO(t)', 'NEXT(n)', 'WAITING(w)', 'PROJECT(p)', '|', 'DONE(d)', 'CANCELLED(c)', 'PROJECT DONE(o)' },
       }
 
       -- NOTE: If you are using nvim-treesitter with ~ensure_installed = "all"~ option
