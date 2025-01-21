@@ -970,7 +970,7 @@ require('lazy').setup({
             target = '~/orgfiles/inbox.org',
           },
         },
-        org_todo_keywords = { 'TODO(t)', 'NEXT(n)', 'WAITING(w)', 'PROJECT(p)', '|', 'DONE(d)', 'CANCELLED(c)', 'PROJECT DONE(o)' },
+        org_todo_keywords = { 'TODO(t)', 'NEXT(n)', 'WAITING(w)', 'PROJECT(p)', '|', 'DONE(d)', 'CANCELLED(c)', 'PROJECT_DONE(o)' },
         org_hide_emphasis_markers = true,
       }
 
