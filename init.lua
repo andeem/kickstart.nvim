@@ -971,6 +971,7 @@ require('lazy').setup({
           },
         },
         org_todo_keywords = { 'TODO(t)', 'NEXT(n)', 'WAITING(w)', 'PROJECT(p)', '|', 'DONE(d)', 'CANCELLED(c)', 'PROJECT DONE(o)' },
+        org_hide_emphasis_markers = true,
       }
 
       -- NOTE: If you are using nvim-treesitter with ~ensure_installed = "all"~ option
