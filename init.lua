@@ -964,6 +964,11 @@ require('lazy').setup({
             template = '* TODO %?\n',
             target = '~/orgfiles/inbox.org',
           },
+          l = {
+            description = 'Link',
+            template = '* %?\n  [[%x]]',
+            target = '~/orgfiles/inbox.org',
+          },
         },
         org_todo_keywords = { 'TODO(t)', 'NEXT(n)', 'WAITING(w)', 'PROJECT(p)', '|', 'DONE(d)', 'CANCELLED(c)', 'PROJECT DONE(o)' },
       }
