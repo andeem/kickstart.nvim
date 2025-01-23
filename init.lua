@@ -961,7 +961,7 @@ require('lazy').setup({
         org_capture_templates = {
           t = {
             description = 'Todo',
-            template = '* TODO %?\n',
+            template = '* TODO %?',
             target = '~/orgfiles/inbox.org',
           },
           l = {
