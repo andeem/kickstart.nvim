@@ -625,15 +625,6 @@ require('lazy').setup({
       local servers = {
         -- clangd = {},
         -- gopls = {},
-        pyright = {
-          settings = {
-            python = {
-              analysis = {
-                typeCheckingMode = 'off',
-              },
-            },
-          },
-        },
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
@@ -644,6 +635,15 @@ require('lazy').setup({
         -- ts_ls = {},
         --
 
+        basedpyright = {
+          settings = {
+            basedpyright = {
+              analysis = {
+                typeCheckingMode = 'standard',
+              },
+            },
+          },
+        },
         lua_ls = {
           -- cmd = { ... },
           -- filetypes = { ... },
