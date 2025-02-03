@@ -635,6 +635,13 @@ require('lazy').setup({
         -- ts_ls = {},
         --
 
+        ruff = {
+          settings = {
+            -- Any extra CLI arguments for `ruff` go here.
+            args = {},
+          },
+        },
+
         basedpyright = {
           settings = {
             basedpyright = {
@@ -680,14 +687,6 @@ require('lazy').setup({
       -- Configure `ruff-lsp`.
       -- See: https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md#ruff_lsp
       -- For the default config, along with instructions on how to customize the settings
-      require('lspconfig').ruff.setup {
-        init_options = {
-          settings = {
-            -- Any extra CLI arguments for `ruff` go here.
-            args = {},
-          },
-        },
-      }
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
       require('mason-lspconfig').setup {
