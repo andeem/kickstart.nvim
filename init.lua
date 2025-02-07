@@ -971,6 +971,12 @@ require('lazy').setup({
         },
         org_todo_keywords = { 'TODO(t)', 'NEXT(n)', 'WAITING(w)', 'PROJECT(p)', '|', 'DONE(d)', 'CANCELLED(c)', 'PROJECT_DONE(o)' },
         org_hide_emphasis_markers = true,
+        org_agenda_custom_commands = {
+          n = {
+            description = 'Seuraavat',
+            types = require 'orgmode_agenda_commands',
+          },
+        },
       }
 
       -- NOTE: If you are using nvim-treesitter with ~ensure_installed = "all"~ option
@@ -987,7 +993,6 @@ require('lazy').setup({
     dependencies = {
       {
         'nvim-orgmode/orgmode',
-        tag = '0.3.7',
       },
     },
     config = function()
