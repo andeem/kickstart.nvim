@@ -882,22 +882,6 @@ require('lazy').setup({
         providers = {
           lazydev = { module = 'lazydev.integrations.blink', score_offset = 100 },
         },
-<<<<<<< HEAD
-        sources = {
-          {
-            name = 'lazydev',
-            -- set group index to 0 to skip loading LuaLS completions as lazydev recommends it
-            group_index = 0,
-          },
-          { name = 'nvim_lsp' },
-          { name = 'luasnip' },
-          { name = 'path' },
-          { name = 'orgmode' },
-          { name = 'nvim_lsp_signature_help' },
-        },
-      }
-    end,
-=======
       },
 
       snippets = { preset = 'luasnip' },
@@ -914,7 +898,6 @@ require('lazy').setup({
       -- Shows a signature help window while you type arguments for a function
       signature = { enabled = true },
     },
->>>>>>> d350db2 (feat: switch nvim-cmp for blink.cmp (#1426))
   },
 
   { -- You can easily change to a different colorscheme.
