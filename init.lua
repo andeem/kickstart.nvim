@@ -999,7 +999,7 @@ require('lazy').setup({
       ---@diagnostic disable-next-line: missing-fields
       require('orgmode').setup {
         org_agenda_files = '~/orgfiles/**/*',
-        org_default_notes_file = '~/orgfiles/refile.org',
+        org_default_notes_file = '~/orgfiles/todo.org',
         org_startup_folded = 'content',
         org_capture_templates = {
           t = {
@@ -1040,7 +1040,6 @@ require('lazy').setup({
   },
   {
     'chipsenkbeil/org-roam.nvim',
-    tag = '0.1.1',
     dependencies = {
       {
         'nvim-orgmode/orgmode',
