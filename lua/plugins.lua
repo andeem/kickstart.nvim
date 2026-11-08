@@ -1,0 +1,5 @@
+require 'plugins.sleuth'
+require 'plugins.gitsigns'
+require 'plugins.which-key'
+require 'plugins.telescope'
+require 'plugins.lspconfig'
